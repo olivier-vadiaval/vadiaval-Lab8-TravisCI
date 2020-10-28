@@ -89,6 +89,13 @@ public class CityList {
      *         Return false otherwise
      */
     public boolean HasCityWithProvince(String province) {
+        for (int i = 0; i < cities.size(); i++) {
+            City city = cities.get(i);
+            if (city.getProvinceName() == province) {
+                return true;
+            }
+        }
+
         return false;
     }
 }
