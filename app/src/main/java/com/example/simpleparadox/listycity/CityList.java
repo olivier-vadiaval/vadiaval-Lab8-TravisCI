@@ -78,7 +78,21 @@ public class CityList {
         return cities.size();
     }
 
-    public boolean HasCityInProvince(String alberta) {
+    /**
+     * Verifies if there is a city in the given province
+     * @param province
+     * @return
+     *       True if there is a city in the given province
+     *       False otherwise
+     */
+    public boolean HasCityInProvince(String province) {
+        for (int i = 0; i < cities.size(); i++) {
+            City city = cities.get(i);
+            if (city.getProvinceName().matches(province)) {
+                return true;
+            }
+        }
+
         return false;
     }
 }
