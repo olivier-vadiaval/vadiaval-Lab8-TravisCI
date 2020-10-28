@@ -28,4 +28,18 @@ class CityListTest {
         assertEquals(2, cityList.countCities());
         assertTrue(cityList.hasCity(new City("Regina", "Saskatchewan")));
     }
+
+    @Test
+    void testHasCityInProvince() {
+        CityList cityList = mockCityList();
+
+        assertEquals(1, cityList.countCities());
+
+        assertTrue(cityList.hasCityInProvince("Alberta"));
+
+        assertFalse(cityList.hasCityInProvince("Saskatchewan"));
+        cityList.add(new City("Regina", "Saskatchewan"));
+        assertTrue(cityList.hasCityInProvince("Saskatchewan"));
+
+    }
 }
