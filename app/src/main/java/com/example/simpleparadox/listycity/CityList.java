@@ -77,4 +77,18 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
+    /**
+     * Returns true if there is a city in the given
+     * province in the list
+     * @param  province
+     *         Province to check
+     * @return
+     *         Return true if there is a city in the
+     *         given province
+     *         Return false otherwise
+     */
+    public boolean HasCityWithProvince(String province) {
+        return false;
+    }
 }
